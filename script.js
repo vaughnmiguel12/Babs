@@ -48,10 +48,14 @@ function storeExcitement() {
 function displaySummary() {
     const chosenDate = localStorage.getItem("selectedDate");
     const chosenLocation = localStorage.getItem("selectedLocation");
+    const chosenFood = localStorage.getItem("selectedFood");
+    const excitementLevel = localStorage.getItem("excitementLevel");
 
-    if (chosenDate && chosenLocation) {
+    if (chosenDate && chosenLocation && chosenFood && excitementLevel) {
         document.getElementById("chosen-date").textContent = chosenDate;
         document.getElementById("chosen-location").textContent = chosenLocation;
+        document.getElementById("chosen-food").textContent = chosenFood;
+        document.getElementById("excitement-rating").textContent = excitementLevel;
     } else {
         alert("Something went wrong. Please start over.");
         goToPage("index.html");
